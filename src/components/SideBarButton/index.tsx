@@ -2,8 +2,7 @@
 
 import Image, { type StaticImageData } from 'next/image'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 
 interface SideBarButtonProps {
@@ -18,12 +17,14 @@ export function SideBarButton(props: SideBarButtonProps) {
   const pathName = usePathname()
   const [isActive, setIsActive] = useState(pathName == props.href)
 
-  useEffect(() => {
-      const handleRouteChange = () => setIsActive(router.pathname === props.href)
-      return () => router.events.off('routeChangeComplete', handleRouteChange)
-  }, [pathName, props.href])
+  // useEffect(() => {
+  //     const handleRouteChange = () => setIsActive(pathName === props.href)
+  //     return () => router.refresh()
+  // }, [pathName, props.href])
 
-  const handleClick = () => {}
+  const handleClick = () => {
+    router.refresh()
+  }
 
   const iconStyle = {
     filter: isActive ? 'brightness(0) invert(1)' : 'none',
@@ -49,3 +50,5 @@ export function SideBarButton(props: SideBarButtonProps) {
     </Link>
   )
 }
+
+export default SideBarButton

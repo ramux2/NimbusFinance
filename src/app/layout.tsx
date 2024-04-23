@@ -22,10 +22,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        {children}
         <div className="flex">
           <SideMenu />
-          <Header />
+          <div className="w-full">
+            <Header />
+            {children}
+          </div>
         </div>
       </body>
     </html>

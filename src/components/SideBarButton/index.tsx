@@ -2,7 +2,7 @@
 
 import Image, { type StaticImageData } from 'next/image'
 import Link from 'next/link'
-import { usePathname, useRouter } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 
 interface SideBarButtonProps {
@@ -13,25 +13,19 @@ interface SideBarButtonProps {
 }
 
 export function SideBarButton(props: SideBarButtonProps) {
-  const router = useRouter()
   const pathName = usePathname()
   const [isActive, setIsActive] = useState(pathName == props.href)
 
-  // useEffect(() => {
-  //     const handleRouteChange = () => setIsActive(pathName === props.href)
-  //     return () => router.refresh()
-  // }, [pathName, props.href])
-
-  const handleClick = () => {
-    router.refresh()
-  }
+  useEffect(() => {
+    setIsActive(pathName === props.href)
+  }, [pathName, props.href])
 
   const iconStyle = {
     filter: isActive ? 'brightness(0) invert(1)' : 'none',
   }
 
   return (
-    <Link href={props.href} className="cursor-pointer" onClick={handleClick}>
+    <Link href={props.href} className="cursor-pointer">
       <div
         className={`flex w-56 p-4 rounded gap-3 ${
           !isActive

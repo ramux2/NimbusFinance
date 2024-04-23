@@ -12,7 +12,7 @@ import nimbusIconWhite from '../../../public/icons/nimbus-icon-white20.svg'
 
 export default function SideMenu() {
   return (
-    <aside className="w-72 relative left-0 top-0 h-screen flex flex-col items-center bg-defaultBlack">
+    <aside className="min-w-72 relative left-0 top-0 h-screen flex flex-col items-center bg-defaultBlack">
       <div className="flex items center mt-12 gap-6 max-w-56">
         <Image src={nimbusIconWhite} alt="nimbus-icon" quality={100} />
         <h1 className='text-whiteFont text-xl font-bold'>Nimbus Finance</h1>

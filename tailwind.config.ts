@@ -10,7 +10,8 @@ const config: Config = {
     extend: {
       backgroundColor: {
         defaultBlack: '#191919',
-        primaryColor: '#792D1D'
+        primaryColor: '#792D1D',
+        backgroundGray: '#F4F5F7'
       },
       textColor: {
         whiteFont: '#FFFFFF',

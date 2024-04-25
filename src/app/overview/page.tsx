@@ -3,6 +3,7 @@ import walletIcon from "../../../public/icons/walletBlue.svg"
 import outcomeArrow from "../../../public/icons/outcomeArrow.svg"
 import incomeArrow from "../../../public/icons/Up arrow.svg"
 import { CardList } from "@/components/CardList";
+import { AccountDisplay } from "@/components/AccountDisplay";
 
 export default function OverviewPage() {
     return (
@@ -30,7 +31,7 @@ export default function OverviewPage() {
                 alt="incomeArrow-icon"            
             />
           </div>
-          <div>
+          <div className="flex justify-center gap-16">
             <CardList
               href="/transactions"
               icon={incomeArrow}
@@ -38,6 +39,7 @@ export default function OverviewPage() {
               value="1530"
               alt="incomeArrow-icon"            
             />
+            <AccountDisplay />
           </div>
         </main>
     )

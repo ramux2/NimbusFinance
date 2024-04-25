@@ -17,7 +17,9 @@ const config: Config = {
         whiteFont: '#FFFFFF',
         defaultBlackFont: '#191919',
         grayZeroThree: '#9F9F9F',
-        grayZeroTwo: '#878787'
+        grayZeroTwo: '#878787',
+        specialGreen: '#4DAF6E',
+        specialRed: '#E73D1C'
       }
     },
   },

@@ -17,7 +17,7 @@ export function CardList(props: CardListProps) {
   return (
     <div className="w-80 ml-6 mt-14">
       <div className="flex justify-between items-center mb-4">
-        <h2 className="text-lg font-semibold">Recent Revenue</h2>
+        <h2 className="text-2xl text-grayZeroTwo">Recent Revenue</h2>
         <a href="#" className="text-blue-500">View All</a>
       </div>
       <div className="bg-white rounded-lg">  

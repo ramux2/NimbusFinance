@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="bg-backgroundGray">
       <body className={inter.className}>
         <div className="flex">
           <SideMenu />

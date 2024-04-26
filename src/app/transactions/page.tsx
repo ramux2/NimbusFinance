@@ -11,7 +11,7 @@ export default function TransactionPage () {
     return (
         <main>
             <div className="flex justify-center">
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-1">
                     <CardContent
                         href="/transactions"
                         icon={walletIcon}

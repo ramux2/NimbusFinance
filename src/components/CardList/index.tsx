@@ -42,20 +42,6 @@ export function CardList(props: CardListProps) {
           value="160.00"
           alt="gameicon"
         />
-        <ListItem
-          icon={ gameIcon }
-          description="GTR 5"
-          category="Gadget & Get"
-          value="160.00"
-          alt="gameicon"
-        />
-        <ListItem
-          icon={ gameIcon }
-          description="GTR 5"
-          category="Gadget & Get"
-          value="160.00"
-          alt="gameicon"
-        />
       </div>
     </div>
   )

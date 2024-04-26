@@ -10,7 +10,7 @@ interface TransactionProps {
 export function Transaction(props: TransactionProps) {
   return (
     <div
-      className="bg-white rounded-lg"
+      className="flex flex-col justify-center gap-6"
       //style={{
         //width: '488px',
         //height: '754px',
@@ -20,8 +20,8 @@ export function Transaction(props: TransactionProps) {
         //opacity: '0',
       //}}
     >
-      <h1 className="text-2xl font-bold mb-4">Transaction</h1>
-      <div className="space-y-4">
+      <h1 className="w-80 max-h-32 text-grayZeroTwo text-xl mt-14">Transaction</h1>
+      <div className= "gap-32 bg-white rounded-lg">
         <label htmlFor="amount" className="block font-medium text-gray-600">
           Amount
         </label>
